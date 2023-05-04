@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
+const port = process.env.PORT || 3001;
 
 const mysql = require('mysql');
 
@@ -60,9 +61,6 @@ app.put("/api/update", (req,res)=>{
 });
 
 
-
-  
-
-app.listen(3001, () => {
-  console.log('Server is listening on port 3001');
+app.listen(port, () => {
+  console.log(`Server is listening on port${port} `);
 });
