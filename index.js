@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //get movie from back end
 app.get("/api/get",(req,res)=>{
+  res.setHeader("Access-Control-Allow-Credentials","true");
   const  sqlSelect = "SELECT * FROM movie__review";
   db.query(sqlSelect ,(error,result)=>{
  res.send(result);
