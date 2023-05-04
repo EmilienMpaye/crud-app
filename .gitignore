@@ -1,0 +1,9 @@
+# node_modules - this directory can be very large and should be ignored
+node_modules/
+
+
+# log files
+*.log
+
+# environment variables file
+.env
